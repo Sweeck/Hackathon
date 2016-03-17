@@ -1,70 +1,9 @@
-########################
-# Customize the test machine
-########################
-machine:
+general:
+  build_dir: PHP
 
-  # Set the timezeone - any value from /usr/share/zoneinfo/ is valid here
-  timezone:
-    Belgium/brussels
+php:
+  version: 5.4.21
 
-  # Version of ruby to use
-  ruby:
-    version:
-      1.8.7-p358-falcon-perf
-
-  # Override /etc/hosts
-  hosts:
-    circlehost: 127.0.0.1
-    dev.mycompany.com: 127.0.0.1
-
-  # Add some environmental variables
-  pre:
-    - echo 'export CIRCLE_ENV=test' >> ~./circlerc
-
-########################
-# Customize checkout
-########################
-checkout:
-  post:
-    - git submodule update --init # use submodules
-    - mv config/database.yml.ci config/database.yml # use a test version of your database.yml file
-
-########################
-# Customize dependencies
-########################
-dependencies:
-  pre:
-    - npm install coffeescript # install from a different package manager
-    - gem uninstall bundler # use a custom version of bunlder
-    - gem install bundler --pre
-
-  override:
-    - bundle install:
-        timeout: 180 # fail if it takes over 3 minutes (note ':' on previous line)
-
-########################
-# Customize database setup
-########################
-database:
-  pre:
-    - mv config/database.yml.ci config/database.yml # completely ignore Circle's database.yml
-
-########################
-# Customize test commands
-########################
 test:
   override:
-    - phpunit test/unit-tests # use PHPunit for testing
-  post:
-    - bundle exec rake jasmine:ci: # add an extra test type
-      environment:
-        RAILS_ENV=test
-        RACK_ENV=test
-
-
-########################
-# Custom notifications
-########################
-notify:
-
-     slack: sweeckhackathonops:jLt3pAWNnD97mVdTvRuOHl0z
+    - php ./index.php --unit-tests
