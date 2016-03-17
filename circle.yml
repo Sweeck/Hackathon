@@ -6,3 +6,9 @@ general:
 test:
   override:
     - php ./index.php --unit-tests
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: Intense Fish
