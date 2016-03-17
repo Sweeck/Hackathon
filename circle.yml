@@ -7,7 +7,7 @@ test:
   override:
     - php ./index.php --unit-tests
 
-<<<<<<< HEAD
+
 database:
   override:
     - mysql -u ubuntu circle_test < my-database-setup.sql
