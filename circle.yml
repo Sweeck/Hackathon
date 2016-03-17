@@ -1,5 +1,4 @@
 ## Customize the test machine
-machine:
 
 general:
   build_dir: PHP
