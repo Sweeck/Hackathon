@@ -7,6 +7,14 @@ test:
   override:
     - php ./index.php --unit-tests
 
+<<<<<<< HEAD
 database:
   override:
     - mysql -u ubuntu circle_test < my-database-setup.sql
+=======
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: Intense Fish
+>>>>>>> origin/master
