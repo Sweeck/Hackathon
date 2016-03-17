@@ -1,8 +1,8 @@
+## Customize the test machine
+machine:
+
 general:
   build_dir: PHP
-
-php:
-  version: 5.4.21
 
 test:
   override:
