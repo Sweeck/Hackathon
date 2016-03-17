@@ -7,3 +7,6 @@ php:
 - hhvm
 
 
+notifications:
+  slack: sweeckhackathonops:jLt3pAWNnD97mVdTvRuOHl0z
+

@@ -1,9 +1,0 @@
-language: php
-php:
-- 7.0
-- 5.5
-- 5.4
-- hhvm
-script: phpunit Test.php
-notifications:
-  slack: sweeckhackathonops:jLt3pAWNnD97mVdTvRuOHl0z
