@@ -15,11 +15,11 @@ database:
   override:
    - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
 
-deployment:
-production:
-    branch: master
-    heroku:
-      appname: Hackathon
+#deployment:
+#production:
+    #branch: master
+   # heroku:
+   #   appname: Hackathon
 
 
 
