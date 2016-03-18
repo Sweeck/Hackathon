@@ -1,5 +1,11 @@
 ## Customize the test machine
 
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: Hackathon
+
 
 
 general:
@@ -10,16 +16,10 @@ test:
  override:
     - php ./index.php --unit-tests
 
-#database:
-# override:
-  # - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
+database:
+ override:
+   - mysql -u ubuntu circle_test <  ./database/linksdb.sql
   
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: Hackathon
-
 
 
 
