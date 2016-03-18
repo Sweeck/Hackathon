@@ -11,3 +11,9 @@ test:
 database:
   override:
     - mysql -u ubuntu circle_test <  db.opt
+
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: Hackathon
