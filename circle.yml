@@ -4,7 +4,7 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: random123456
+      appname: sweeckhackathon
 
 general:
   build_dir: PHP
