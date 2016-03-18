@@ -10,4 +10,4 @@ test:
 
 database:
   override:
-    - mysql -u ubuntu circle_test < my-database-setup.sql
+    - mysql -u ubuntu circle_test <  db.opt
