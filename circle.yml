@@ -1,4 +1,8 @@
 ## Customize the test machine
+database:
+  override:
+   - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
+
 
 general:
   build_dir: PHP
@@ -15,7 +19,5 @@ production:
       appname: Hackathon
 
 
-database:
-  override:
-   - mysql -u ubuntu circle_test <  /database/linksdb/db.opt
+
 
