@@ -2,9 +2,14 @@
 
 #general:
 #  build_dir: PHP
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: Hackathon
 
 test:
-  override:
+ override:
     - php ./PHP/index.php --unit-tests
 
 
@@ -12,8 +17,3 @@ test:
  # override:
   # - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
 
-deployment:
-  prod:
-    branch: master
-    heroku:
-      appname: Hackathon
