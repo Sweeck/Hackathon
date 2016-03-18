@@ -1,24 +1,24 @@
 ## Customize the test machine
 
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: Hackathon
+#deployment:
+ # staging:
+  #  branch: master
+   # heroku:
+    #  appname: Hackathon
 
 
 
-general:
-  build_dir: PHP
+#general:
+ # build_dir: PHP
 
 
 test:
  override:
-    - php ./index.php --unit-tests
+    - php ./PHP/index.php --unit-tests
 
 database:
  override:
-   - mysql -u ubuntu circle_test <  /database/linksdb.sql
+   - mysql -u ubuntu circle_test <  ./database/linksdb.sql
   
 
 
