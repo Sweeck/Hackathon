@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 18 mrt 2016 om 09:59
+-- Gegenereerd op: 18 mrt 2016 om 13:08
 -- Serverversie: 10.1.10-MariaDB
 -- PHP-versie: 5.6.19
 
@@ -27,26 +27,28 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `the_links` (
-  `LinkID` int(11) NOT NULL,
-  `Name` text NOT NULL,
-  `Url` text NOT NULL
+  `link_id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `url` text NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `the_links`
 --
 
-INSERT INTO `the_links` (`LinkID`, `Name`, `Url`) VALUES
-(1, 'Google', 'https://www.google.be/?gfe_rd=cr&ei=vJPqVv3eI_LU8geQkbLwBw&gws_rd=ssl'),
-(2, 'Artesis start', 'http://start.ap.be/'),
-(3, 'Armor Games', 'http://armorgames.com/'),
-(4, 'Facebook', 'https://www.facebook.com/'),
-(5, '9GAG', 'http://9gag.com/'),
-(6, 'Hivset', 'http://www.hivset.be/'),
-(7, 'Large', 'http://www.large.be/'),
-(8, 'delijn', 'https://www.delijn.be/nl/'),
-(9, 'Mini In The Box', 'http://www.miniinthebox.com/nl/'),
-(10, 'Tribalwars', 'https://www.tribalwars.nl/');
+INSERT INTO `the_links` (`link_id`, `name`, `url`, `id`) VALUES
+(0, '9gag', 'http://9gag.com/', 1),
+(0, 'Artesis Plantijn', 'https://www.ap.be/', 2),
+(0, 'armorgames', 'http://armorgames.com/', 3),
+(0, 'facebook', 'https://www.facebook.com/', 4),
+(0, 'google', 'https://www.google.be/', 5),
+(0, 'h-brug', 'https://nl.wikipedia.org/wiki/H-brug_(elektronica)', 6),
+(0, 'hivset', 'http://www.hivset.be/', 7),
+(0, 'large', 'http://www.large.be/', 8),
+(0, 'de lijn', 'https://www.delijn.be/nl/routeplanner/', 9),
+(0, 'mini in the box', 'http://www.miniinthebox.com/', 10),
+(0, 'tribalwars', 'https://www.tribalwars.nl/', 11);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -56,7 +58,7 @@ INSERT INTO `the_links` (`LinkID`, `Name`, `Url`) VALUES
 -- Indexen voor tabel `the_links`
 --
 ALTER TABLE `the_links`
-  ADD PRIMARY KEY (`LinkID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
@@ -66,7 +68,7 @@ ALTER TABLE `the_links`
 -- AUTO_INCREMENT voor een tabel `the_links`
 --
 ALTER TABLE `the_links`
-  MODIFY `LinkID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
