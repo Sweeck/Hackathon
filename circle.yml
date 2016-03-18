@@ -2,15 +2,17 @@
 
 #general:
 #  build_dir: PHP
-deployment:
-  prod:
-    branch: master
-    heroku:
-      appname: Hackathon
+
 
 test:
  override:
     - php ./PHP/index.php --unit-tests
+
+deployment:
+production:
+    branch: master
+    heroku:
+      appname: Hackathon
 
 
 #database:
