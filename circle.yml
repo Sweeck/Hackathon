@@ -1,7 +1,5 @@
 ## Customize the test machine
-database:
-  override:
-   - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
+
 
 
 general:
@@ -11,6 +9,11 @@ general:
 test:
  override:
     - php ./index.php --unit-tests
+
+
+database:
+  override:
+   - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
 
 deployment:
 production:
