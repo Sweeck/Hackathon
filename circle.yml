@@ -2,20 +2,16 @@
 
 deployment:
   staging:
-    branch: master
-    commands:
-      - ./deploy_staging.sh
+    branch: hello??
+    heroku:
+    appname: Hackathon
 
 general:
   build_dir: PHP
 
-
 database:
  override:
    - mysql -u ubuntu circle_test <  ../database/linksdb.sql
-
-
-
 
 test:
  override:
