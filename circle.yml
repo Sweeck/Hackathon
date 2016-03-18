@@ -2,9 +2,9 @@
 
 deployment:
   staging:
-    branch: hello??
+    branch: master
     heroku:
-    appname: Hackathon
+    	appname: Hackathon
 
 general:
   build_dir: PHP
