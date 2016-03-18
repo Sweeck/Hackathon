@@ -9,7 +9,7 @@ test:
     - php ./index.php --unit-tests
 
 deployment:
-production:
+  staging:
     branch: master
     heroku:
       appname: Hackathon
