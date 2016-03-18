@@ -1,7 +1,8 @@
 ## Customize the test machine
 
-#general:
-#  build_dir: PHP
+general:
+  build_dir: PHP
+
 deployment:
   prod:
     branch: master
@@ -10,7 +11,7 @@ deployment:
 
 test:
  override:
-    - php ./PHP/index.php --unit-tests
+    - php ./index.php --unit-tests
 
 
 #database:
