@@ -19,7 +19,7 @@ database:
 
 test:
  override:
-    - php ./PHP/index.php --unit-tests
+    - php ./index.php --unit-tests
 
 
   
