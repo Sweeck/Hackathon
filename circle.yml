@@ -5,20 +5,20 @@
   #  branch: master
    # heroku:
     #  appname: Hackathon
+database:
+ override:
+   - mysql -u ubuntu circle_test <  ./database/linksdb.sql
 
 
-
-#general:
- # build_dir: PHP
+general:
+  build_dir: PHP
 
 
 test:
  override:
     - php ./PHP/index.php --unit-tests
 
-database:
- override:
-   - mysql -u ubuntu circle_test <  ./database/linksdb.sql
+
   
 
 
