@@ -1,16 +1,16 @@
 ## Customize the test machine
 
-general:
-  build_dir: PHP
+#general:
+#  build_dir: PHP
 
 test:
   override:
-    - php ./index.php --unit-tests
+    - php ./PHP/index.php --unit-tests
 
 
-database:
-  override:
-    - mysql -u ubuntu circle_test <  db.opt
+#database:
+ # override:
+  # - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
 
 deployment:
   prod:
