@@ -1,10 +1,10 @@
 ## Customize the test machine
 
 deployment:
-	staging:
-	branch: master
-	heroku:
-	appname: Hackathon
+  staging:
+    branch: master
+    heroku:
+      appname: hackathon
 
 general:
   build_dir: PHP
