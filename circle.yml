@@ -14,7 +14,7 @@ test:
     - php ./index.php --unit-tests
 
 
-#database:
- # override:
-  # - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
+database:
+  override:
+   - mysql -u ubuntu circle_test <  /database/linksdb/db.opt
 
