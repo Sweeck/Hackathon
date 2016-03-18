@@ -1,5 +1,7 @@
 ## Customize the test machine
 
+
+
 general:
   build_dir: PHP
 
@@ -8,6 +10,10 @@ test:
  override:
     - php ./index.php --unit-tests
 
+#database:
+# override:
+  # - mysql -u ubuntu circle_test <  ./database/linksdb/db.opt
+  
 deployment:
   staging:
     branch: master
@@ -15,7 +21,7 @@ deployment:
       appname: Hackathon
 
 
-database:
-  override:
-   - mysql -u ubuntu circle_test <  /database/linksdb/db.opt
+
+
+
 
